@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - HTML5 Editable Table</title>
+    <title>Custom Stock Monitor</title>
     <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
     <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./style.css">
@@ -12,13 +12,13 @@
 
 <body>
     <!-- partial:index.partial.html -->
-    <div class="container">
+    <div id="contact-form" , class="container">
         <h1>Custom Stock Monitor</h1>
-        <p>Through the powers of <strong>contenteditable</strong> and some simple jQuery you can easily create a custom editable table. No need for a robust JavaScript library anymore these days.</p>
+        <p>Detect changes in U.S. stocks and provide personalized reminders to customers by email.</p>
 
         <ul>
-            <li>An editable table that exports a hash array. Dynamically compiles rows from headers</li>
-            <li>Simple / powerful features such as add row, remove row, move row up/down.</li>
+            <li>Monitor any number of U.S. stocks which listed in Yahoo finance.</li>
+            <li>Select suitable check frequence and change percentage.</li>
         </ul>
 
         <h4>Email:</h4>
@@ -36,8 +36,36 @@
                     <th></th>
                 </tr>
                 <tr>
-                    <td contenteditable="true">APPL</td>
-                    <td contenteditable="true">282.97</td>
+                    <td>
+                        <select contenteditable="true" , id="stock">
+                            <option>ZM</option>
+                            <option>AAPL</option>
+                            <option>FB</option>
+                            <option>AMZN</option>
+                            <option>GOOG</option>
+                            <option>AMD</option>
+                            <option>NFLX</option>
+                            <option>TSLA</option>
+                            <option>CSCO</option>
+                            <option>NVDA</option>
+                            <option>INTC</option>
+                            <option>MSFT</option>
+                            <option>ORCL</option>
+                            <option>IBM</option>
+                            <option>HPQ</option>
+                            <option>DELL</option>
+                            <option>EBAY</option>
+                            <option>QCOM</option>
+                            <option>TXN</option>
+                            <option>TWTR</option>
+                            <option>BABA</option>
+                            <option>BILI</option>
+                            <option>UBER</option>
+                            <option>LYFT</option>
+                            <option>WORK</option>
+                        </select>
+                    </td>
+                    <td contenteditable="true" , id="buying-price">282.97</td>
                     <!-- <td contenteditable="true">5</td> -->
                     <td>
                         <select id="frequence">
@@ -49,7 +77,7 @@
                           <option>30</option>
                         </select>
                     </td>
-                    <td contenteditable="true">10</td>
+                    <td contenteditable="true" , id="percent">10</td>
                     <td>
                         <span class="table-remove glyphicon glyphicon-remove"></span>
                     </td>
@@ -60,8 +88,36 @@
                 </tr>
                 <!-- This is our clonable table line -->
                 <tr class="hide">
-                    <td contenteditable="true">Untitled</td>
-                    <td contenteditable="true">undefined</td>
+                    <td>
+                        <select id="stock">
+                            <option>ZM</option>
+                            <option>AAPL</option>
+                            <option>FB</option>
+                            <option>AMZN</option>
+                            <option>GOOG</option>
+                            <option>AMD</option>
+                            <option>NFLX</option>
+                            <option>TSLA</option>
+                            <option>CSCO</option>
+                            <option>NVDA</option>
+                            <option>INTC</option>
+                            <option>MSFT</option>
+                            <option>ORCL</option>
+                            <option>IBM</option>
+                            <option>HPQ</option>
+                            <option>DELL</option>
+                            <option>EBAY</option>
+                            <option>QCOM</option>
+                            <option>TXN</option>
+                            <option>TWTR</option>
+                            <option>BABA</option>
+                            <option>BILI</option>
+                            <option>UBER</option>
+                            <option>LYFT</option>
+                            <option>WORK</option>
+                        </select>
+                    </td>
+                    <td contenteditable="true" , id="buying-price">undefined</td>
                     <td>
                         <select id="frequence">
                           <option>5</option>
@@ -72,7 +128,7 @@
                           <option>30</option>
                         </select>
                     </td>
-                    <td contenteditable="true">undefined</td>
+                    <td contenteditable="true" , id="percent">undefined</td>
                     <td>
                         <span class="table-remove glyphicon glyphicon-remove"></span>
                     </td>
